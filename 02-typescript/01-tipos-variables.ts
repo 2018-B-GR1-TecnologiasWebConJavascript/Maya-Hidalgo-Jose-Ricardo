@@ -1,57 +1,94 @@
-//01-tpo-variable
+// 01-tipo-variables.ts
 
-let edad:number | string = 13;
-let variableLoca:any='';
-let nombre:string = 'Adrian';
-let casado:boolean = false;
-let adrian:{//Interface
-    nombre:string;
-    apellido?:string;
-} = {//JSON
-    nombre:'Adrian'
+let edad: number | string = 13;
+edad = 25;
+edad = 'Nombre';
+
+let variableLoca: any = '';
+variableLoca = false;
+
+let nombre: string = 'Adrian';
+// duck typing ->
+let casado = false;
+casado = true;
+casado = false;
+casado = null;
+casado = undefined;
+
+let adrian: { // Interface
+    nombre: string;
+    apellido?: string;
+} = { // JSON
+    nombre: 'Carmita',
+    apellido: 'Sarzosa'
 };
 
-let  fechaNacimiento:Date = new Date();
+let fechaNacimiento: Date = new Date();
 
 /*
-let promesa:Promise<number>=()=>{
+let promesa: Promise<number> = () => {
     return new Promise(
-    executor:(resolve,reject)=> {
-        resolve(1);
-
-    }
-});
-
+        (resolve, reject) => {
+            resolve(1);
+        }
+    );
+};
 */
 
+console.log(adrian); // undefined
 
-let numeros: number[] = [1,2,3,4];
-function  saludar(
-    nombre:string,
-    apellido?: string,
-    ...otrosNombres:string[]):void{//mandar infinitos nombres y devoler solo como void
-    return
+let numeros: number[] = [1, 2, 3, 4];
+
+
+function saludar(
+    nombre: string, // REQUERIDOS
+    apellido?: string,  // OPCIONALES
+    ...otrosNombres: string[]): string | number { // INFINITOS
+    return '';
 }
 
-let respuestaSaludar = saludar('Vicente');
+let respuestaSaludar = <string> saludar('Vicente', 'Eguez', '', '', '', '');
 
-const saludo = (nombre:string):number =>{
+//respuestaSaludar = 1;
+respuestaSaludar = '';
+
+const saludo = (nombre: string): number => {
     return 1;
-}
+};
 
-class USuario{
-    public edad:string;
+
+class Usuario {
+    protected edad: string;
     nombre;
-    constructor(){
-        
+
+    constructor() {
+
     }
-    saludar(nombre:string):string{
+
+    private saludar(nombre: string): string {
         return nombre;
     }
 }
 
-const ricardoInstancia = new USuario();
+const adrianInstancia = new Usuario();
 
-interface Interface {
-    
+interface UsuarioInterface{
+    nombre:string;
+    apellido?:string;
 }
+
+class UsuarioDummy{
+    nombre:string;
+    apellido?:string;
+}
+
+const vicente:UsuarioDummy = {
+    nombre:'Vicente',
+    apellido:'Eguez'
+};
+
+
+
+
+
+
