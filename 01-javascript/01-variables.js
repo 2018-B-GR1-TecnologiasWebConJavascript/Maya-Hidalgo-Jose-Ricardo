@@ -8,16 +8,16 @@ var hijos = null;
 var dato;
 var fechaNacimiento = new Date();
 
-var adrian = {
-    "nombre": "Vicente",
-    'segundoNombre': 'Adrian',
-    apellidoPaterno: `Eguez`,
-    apellidoMaterno: 'Sarzosa',
+var ricardo = {
+    "nombre": "Ricardo",
+    'segundoNombre': 'Jose',
+    apellidoPaterno: `Maya`,
+    apellidoMaterno: 'Hidalgo',
     edad: 29,
     casado: false,
     hijo: null,
     mascotas: {
-        nombre: "Cachetes"
+        nombre: "Peluche"
     }
 }; // object
 
@@ -32,15 +32,15 @@ console.log("dato tipo", typeof dato); // undefined
 console.log("fechaNacimiento", typeof fechaNacimiento); // object
 
 
-console.log(adrian.mascotas.nombre);
-console.log(adrian);
-delete adrian.hijo;
-console.log(adrian);
-adrian.hija = {
+console.log(ricardo.mascotas.nombre);
+console.log(ricardo);
+delete ricardo.hijo;
+console.log(ricardo);
+ricardo.hija = {
     nombre:'????'
 };
 
-console.log(adrian.abuelo);
+console.log(ricardo.abuelo);
 
 if(true){
     console.log("Si") //X
@@ -91,7 +91,7 @@ if(null){ // Falsy
     console.log("No")
 }
 
-if({nombre:'adrian'}){ // Truthy
+if({nombre:'ricardo'}){ // Truthy
     console.log("Si")
 }else{
     console.log("No")

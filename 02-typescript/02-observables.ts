@@ -9,13 +9,13 @@ const concat = require('rxjs/operators').concat;
 
 const numeros$ = rxjs.of(
     1,
-    "Adrian",
-    "Adrian",
+    "Ricardo",
+    "Ricardo",
     1,
     true,
     true,
     1,
-    {nombre: 'Adrian'},
+    {nombre: 'Ricardo'},
     1,
     [1, 2, 3],
     new Date(),
@@ -25,6 +25,7 @@ const numeros$ = rxjs.of(
 
 
 const promesita = (correcto) => {
+    // @ts-ignore
     return new Promise(
         (resolve, reject) => {
             if (correcto) {

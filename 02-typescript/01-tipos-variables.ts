@@ -83,8 +83,8 @@ class UsuarioDummy{
 }
 
 const vicente:UsuarioDummy = {
-    nombre:'Vicente',
-    apellido:'Eguez'
+    nombre:'Ricardo',
+    apellido:'Maya'
 };
 
 
